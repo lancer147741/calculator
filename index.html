@@ -10,27 +10,28 @@
     <input id="display" disabled placeholder="0">
 
     <div class="buttons">
-      <button onclick="ui.clearAll()">AC</button>
-      <button onclick="ui.deleteLast()">⌫</button>
-      <button onclick="ui.append('/')">/</button>
+      <button class="function" onclick="ui.clearAll()">AC</button>
+      <button class="function" onclick="ui.deleteLast()">⌫</button>
+      <button class="operator" onclick="ui.append('/')">/</button>
+      <button class="operator" onclick="ui.append('*')">*</button>
 
       <button onclick="ui.append('7')">7</button>
       <button onclick="ui.append('8')">8</button>
       <button onclick="ui.append('9')">9</button>
-      <button onclick="ui.append('*')">*</button>
+      <button class="operator" onclick="ui.append('-')">-</button>
 
       <button onclick="ui.append('4')">4</button>
       <button onclick="ui.append('5')">5</button>
       <button onclick="ui.append('6')">6</button>
-      <button onclick="ui.append('-')">-</button>
+      <button class="operator" onclick="ui.append('+')">+</button>
 
       <button onclick="ui.append('1')">1</button>
       <button onclick="ui.append('2')">2</button>
       <button onclick="ui.append('3')">3</button>
-      <button onclick="ui.append('+')">+</button>
+      <button class="operator" onclick="calculator.calculate()">=</button>
 
-      <button onclick="ui.append('0')">0</button>
-      <button onclick="calculator.calculate()">=</button>
+      <button class="zero" onclick="ui.append('0')">0</button>
+      <button onclick="ui.append('.')">.</button>
     </div>
 
     <div id="history-container">
