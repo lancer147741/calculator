@@ -5,63 +5,141 @@ body {
     align-items: center;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .calculator {
+    margin: 0;
+   }
+   
+   .calculator {
     background: #1c1c1c;
     padding: 20px;
-    border-radius: 20px;
-    width: 320px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  }
-  
-  #display {
+    border-radius: 25px;
+    width: 340px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+   }
+   
+   /* Экран калькулятора */
+   #display {
     width: 100%;
-    height: 60px;
-    font-size: 32px;
+    height: 70px;
+    font-size: 34px;
     text-align: right;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 10px;
+    padding: 0 15px;
+    margin-bottom: 18px;
+    border-radius: 16px;
     border: none;
-    background: #3b3b3b;
-    color: #fff;
-  }
-  
-  .buttons {
+    outline: none;
+    background: #2d2d2d;
+    color: #ffffff;
+    box-sizing: border-box;
+   
+    /* убираем кривой вид */
+    display: flex;
+    align-items: center;
+   
+    /* ровный текст */
+    letter-spacing: 1px;
+   }
+   
+   /* Сетка кнопок */
+   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  button {
-    height: 60px;
+    gap: 12px;
+   }
+   
+   button {
+    height: 65px;
     font-size: 24px;
     border: none;
-    border-radius: 10px;
+    border-radius: 16px;
     cursor: pointer;
-    color: #fff;
     transition: 0.2s;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  .operator {
-    background-color: #ff9500;
-  }
-  
-  .function {
-    background-color: #a6a6a6;
-    color: #000;
-  }
-  
-  button:not(.operator):not(.function) {
-    background-color: #333;
-  }
-  
-  .zero {
+    font-weight: 500;
+   }
+   
+   /* Эффект нажатия */
+   button:active {
+    transform: scale(0.96);
+   }
+   
+   /* Обычные кнопки */
+   button:not(.operator):not(.function) {
+    background: #2f2f2f;
+    color: white;
+   }
+   
+   button:not(.operator):not(.function):hover {
+    background: #3a3a3a;
+   }
+   
+   /* Операторы */
+   .operator {
+    background: #ff9500;
+    color: white;
+   }
+   
+   .operator:hover {
+    background: #ffad33;
+   }
+   
+   /* Системные кнопки */
+   .function {
+    background: #a5a5a5;
+    color: black;
+   }
+   
+   .function:hover {
+    background: #c5c5c5;
+   }
+   
+   /* Кнопка 0 */
+   .zero {
     grid-column: span 2;
-  }
+   }
+   
+   /* HISTORY */
+   #history-container {
+    margin-top: 22px;
+    background: #252525;
+    border-radius: 18px;
+    padding: 14px;
+    max-height: 160px;
+    overflow-y: auto;
+    border: 1px solid #3a3a3a;
+   }
+   
+   /* Заголовок */
+   #history-container h3 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+   }
+   
+   /* Список */
+   #history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   }
+   
+   /* Элементы истории */
+   #history-list li {
+    background: #323232;
+    color: #f5f5f5;
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    word-break: break-word;
+   }
+   
+   /* Скролл */
+   #history-container::-webkit-scrollbar {
+    width: 6px;
+   }
+   
+   #history-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+   }
   
