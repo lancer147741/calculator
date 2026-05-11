@@ -44,3 +44,5 @@ js/app.js
 HTML5
 CSS3 (Grid Layout, стилизация кнопок, адаптивность)
 Vanilla JavaScript (модульная структура, DOM-манипуляции)
+<img width="495" height="702" alt="{F3C12714-9F40-4643-82E9-B5C1E917D973}" src="https://github.com/user-attachments/assets/ebfc4318-f729-4599-8e61-4c8c9d83f9ab" />
+
